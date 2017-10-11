@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Css3 grids</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            .wrapper{
+                display: grid;
+                /* grid-template-columns: 2fr 6fr 2fr; */
+                /* grid-template-columns:repeat(3, 3fr); */
+                grid-template-columns:repeat(3, 3fr);
+                grid-gap:1em;
+                /* grid-auto-rows:110px; */
+                grid-auto-rows:minmax(100px, auto);
+            }
+            #nested{
+
+                display:grid;
+                grid-template-columns:repeat(3, 4fr);
+                grid-auto-rows:minmax(100px, auto);
+                grid-gap:1em;
+            }
+        .wrapper > div{
+
+            background: #eee;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+
+            background: #ddd;
+        }
+        #nested > div{
+            border: 1px solid #333;
+            padding: 1em;
+
+
+        }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- nesting grids....first div with id nested -->
+            <div id="nested">
+                <div>Lorem ipsum</div>
+                <div>Lorem ipsum</div>
+                <div>Lorem ipsum</div>
+                <div>Lorem ipsum</div>
+                <div>Lorem ipsum</div>
+                <div>Lorem ipsum</div>
+                <div>Lorem ipsum</div>
+                <div>Lorem ipsum</div>
+                <div>Lorem ipsum</div>
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis neque facere velit impedit omnis laborum assumenda magni magnam perferendis illo dolorem voluptate aspernatur molestiae at natus sapiente cumque, fugiat vero harum ipsam repellendus! Dolor, vitae molestiae eligendi voluptatem nobis non ratione ex veritatis quidem adipisci eaque vel illo ut consectetur amet laudantium maiores earum? Eligendi omnis, commodi quas facilis animi quia aperiam. Quas odio odit ducimus fugit recusandae maxime quia, molestias neque laborum eaque, cumque adipisci repellendus. Modi assumenda quis nostrum dolores voluptate reiciendis illo, dolor sunt exercitationem ullam totam suscipit harum ea quam quae tenetur laboriosam repellat autem vel!
+            </div>
+        </div>
+    
+    </body>
+</html>
